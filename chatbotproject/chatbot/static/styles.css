@@ -1,0 +1,104 @@
+/* Add your custom CSS styles here */
+
+/* Chat History Styles */
+
+.history {
+    padding: 20px;
+    background-color: #006BBB;
+    border-radius: 10px;
+    height: 80vh; /* Adjust the height as needed */
+    overflow-y: scroll; /* Enable vertical scroll */
+    margin-right: 10px; /* Add margin to separate from chat container */
+     
+
+    .card-title {
+      font-family: "Tilt Neon", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+      font-variation-settings:
+        "XROT" 0,
+        "YROT" 0;
+    };
+}
+.history:hover{
+    text-decoration: 2px solid underline;
+}
+
+.card-body {
+    padding: 0; /* Remove padding to fit chat history content */
+}
+
+/* Chat Container Styles */
+.chat-container {
+    padding: 20px;
+    background-color: #30A0E0; /* Change background color if needed */
+    border-radius: 10px;
+    height: 80vh; /* Adjust the height as needed */
+    overflow-y: scroll; /* Enable vertical scroll */
+    margin-top: 7vh;
+    
+}
+
+.chat-box {
+    min-height: 65vh; 
+    
+    /* margin-bottom: 20px; */
+}
+
+.form-control {
+    border-radius: 20px;
+}
+
+.btn-primary {
+    border-radius: 20px;
+   
+}
+
+/* Sidebar Styles */
+.sidebar {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    height: 100vh; /* Adjust the height as needed */
+    overflow-y: scroll; /* Enable vertical scroll */
+    background-color:  #006BBB;
+}
+
+.card {
+    margin-bottom: 10px;
+    height: 100vh;
+    background-color:  #FFC872;
+    border: 2px solid #DADADA;
+    padding-top: 10px;
+    /* box-shadow: 0 0 0 2px rgb(10, 10, 10); */
+    transition: transform 0.3s ease;
+}
+.card:hover{
+    transform: translateY(-5px); 
+}
+
+/* Community Support and Self Care Tips Styles */
+.support, .self-care {
+    height: 35vh; /* Adjust the height as needed */
+    overflow-y: auto; /* Enable vertical scroll */
+    .card-title {
+        font-family: "Tilt Neon", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-variation-settings:
+          "XROT" 0,
+          "YROT" 0;
+      };
+      text-align: center;
+      font-size: 12px;
+      
+}
+.self-care{
+    background-color: #FFE3B3;
+}
+#last{
+    height: 100px;
+    background-color:#f4ebdb ;
+}

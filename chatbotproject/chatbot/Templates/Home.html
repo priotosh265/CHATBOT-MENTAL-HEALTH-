@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+     <!--<script src="{% static 'script.js' %}"></script>-->
+    <title>Mental Health Chatbot</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">">
+</head>
+
+<body>
+   
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Chat History -->
+            <div class="col-md-3">
+                <div class="history card">
+                    <div class="card-body">
+                        <h2 class="card-title">Chat History⏱️</h2>
+                        <div id="chat-history" class="card-text">
+                            <!-- Chat history will be displayed here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Chat Container -->
+            <div class="col-md-6">
+                <div class="chat-container">
+                    <div class="chat-box" id="chat-box">
+                        <p>
+                            {% for value in values %}
+            {{value}}
+        {% endfor %}
+                        </p>
+                    </div>
+                    <div style="display: flex; " class="text">
+                        <form method="post" action="{% url 'homepageurl' %}">
+                            {% csrf_token %}
+                        <input type="text" id="userinput" name="userinput"
+                            class="form-control mb-2" placeholder="Type your message..."
+                            style="text-decoration: none;border: none;height:40px">
+                        <button style="border: none;margin-right: px; font-size: 30px; border-radius: 50%;">🧠</button>
+                    </form></div>
+
+                </div>
+            </div>
+            <!-- Sidebar -->
+            <div class="col-md-3">
+                <div class="sidebar">
+                    <!-- Community Support -->
+                    <div class="support card mt-4">
+                        <div class="card-body">
+                            <h2 class="card-title">Community Support🧑‍🤝‍🧑</h2>
+                            <p class="card-text">Here you can find resources and support from our community.</p>
+                        </div>
+                    </div>
+                    <!-- Self Care Tips -->
+                    <div class="self-care card mt-4">
+                        <div class="card-body">
+                            <h2 class="card-title">Self Care 🔦</h2>
+                            <p class="card-text"style="padding-left:7px;"><b>Here are some self-care tips to help you manage your mental health:</b></p>
+                            <ul class="card-text">
+                                <P style="margin-right: 20px;">Practice deep breathing exercises
+                                Take regular breaks
+                                Engage in physical activity
+                                Get enough sleep
+                                Connect with loved ones</p>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="support card mt-4"id="last">
+                        <div class="card-body">
+                            <h2 class="card-title">Help-line📞</h2>
+                            <p class="card-text"><b>+91-90246754563</b></p>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>
